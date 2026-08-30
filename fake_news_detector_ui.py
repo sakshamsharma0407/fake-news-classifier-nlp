@@ -12,10 +12,10 @@ def load_model():
 model, tfidf = load_model()
 def get_connection():
     return mysql.connector.connect(
-        host=st.secrets["mysql"]["host"],
-        user=st.secrets["mysql"]["user"],
-        password=st.secrets["mysql"]["password"],
-        database=st.secrets["mysql"]["database"]
+        host="localhost",
+        user="root",
+        password="sakshamsharma@2007",
+        database="FAKENEWS"
     )
 
 SETTINGS_FILE = "settings.json"
