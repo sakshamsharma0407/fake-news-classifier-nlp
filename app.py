@@ -12,12 +12,11 @@ def load_model():
 model, tfidf = load_model()
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="sakshamsharma@2007",
-        database="FAKENEWS"
+        host=st.secrets["mysql"]["host"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"]
     )
-
 SETTINGS_FILE = "settings.json"
 
 FONT_COLORS = {
