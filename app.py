@@ -332,7 +332,9 @@ elif st.session_state.page == "settings":
         ),
         key="background_choice"
     )
+
     st.subheader("Preview")
+
     st.markdown(
         f"""
         <div style="
@@ -349,14 +351,17 @@ elif st.session_state.page == "settings":
         """,
         unsafe_allow_html=True
     )
+
     if st.button("Save Settings", key="save_settings"):
 
         save_settings(
             font_choice,
             BG_COLORS[background_choice]
         )
+
         st.success("Settings saved permanently!")
         st.rerun()
+
     if st.button("Back", key="settings_back"):
 
         st.session_state.page = "home"
@@ -428,6 +433,7 @@ elif st.session_state.page=="sign_up":
     st.write("")
     st.write("")
     st.write("")
+   
     if st.button("Back", key="signup_back"):
         st.session_state.page = "login"
         st.rerun()
